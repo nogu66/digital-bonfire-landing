@@ -105,6 +105,115 @@ const en = {
   },
   footer: {
     copyright: "Digital Bonfire. All rights reserved.",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+  },
+  legal: {
+    backToHome: "Back to Home",
+    privacy: {
+      title: "Privacy Policy",
+      description: "Privacy Policy for Digital Bonfire",
+      lastUpdated: "Last updated: February 17, 2026",
+      sections: [
+        {
+          title: "Introduction",
+          content:
+            'Digital Bonfire ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use the Digital Bonfire mobile application (the "App").',
+        },
+        {
+          title: "Information We Collect",
+          content:
+            "Digital Bonfire is designed with your privacy in mind. We collect minimal data necessary to provide and improve our service:\n\n• Purchase Information: Subscription and purchase data is handled entirely by Apple through the App Store. We do not directly collect or store your payment information.\n• Usage Analytics: We may collect anonymous, aggregated usage data (such as feature usage frequency) to improve the App. This data cannot be used to identify you personally.\n• Device Information: Basic device information may be collected for crash reporting and performance optimization.",
+        },
+        {
+          title: "Information We Do Not Collect",
+          content:
+            "We do not collect:\n\n• Personal identification information (name, email, phone number)\n• Location data\n• Contacts or address book data\n• Photos, camera, or microphone data\n• Health or fitness data\n• Browsing history or tracking data",
+        },
+        {
+          title: "Third-Party Services",
+          content:
+            "The App may use the following third-party services:\n\n• Apple App Store: For processing subscriptions and purchases. Apple's privacy policy applies to payment processing.\n• Analytics Services: We may use privacy-focused analytics to understand how the App is used in aggregate.",
+        },
+        {
+          title: "Data Security",
+          content:
+            "We take appropriate measures to protect any information processed through the App. Since we collect minimal data, your privacy risk is inherently low.",
+        },
+        {
+          title: "Children's Privacy",
+          content:
+            "Digital Bonfire does not knowingly collect personal information from children under 13. The App is designed to be safe for users of all ages as it does not require any personal information to function.",
+        },
+        {
+          title: "Changes to This Policy",
+          content:
+            "We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date. We encourage you to review this policy periodically.",
+        },
+        {
+          title: "Contact Us",
+          content:
+            "If you have any questions about this Privacy Policy, please contact us at:\n\nEmail: support@digital-bonfire.app",
+        },
+      ],
+    },
+    terms: {
+      title: "Terms of Service",
+      description: "Terms of Service for Digital Bonfire",
+      lastUpdated: "Last updated: February 17, 2026",
+      sections: [
+        {
+          title: "Agreement to Terms",
+          content:
+            'By downloading, installing, or using Digital Bonfire (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.',
+        },
+        {
+          title: "Description of Service",
+          content:
+            "Digital Bonfire is a relaxation and entertainment application that provides a pixel art campfire experience. The App allows users to customize fire types, companions, and weather effects for a calming visual and audio experience.",
+        },
+        {
+          title: "Subscriptions and Purchases",
+          content:
+            "The App offers both free and premium features:\n\n• Free Features: Basic wood types and companions are available at no cost.\n• Premium Subscription: Additional wood types, companions, and weather effects are available through monthly, annual, or lifetime subscription plans.\n• All purchases and subscriptions are processed through the Apple App Store and are subject to Apple's terms and conditions.\n• Subscription management, including cancellation and renewal, is handled through your Apple ID account settings.\n• Refund requests must be directed to Apple in accordance with their refund policy.",
+        },
+        {
+          title: "Intellectual Property",
+          content:
+            "All content within the App, including but not limited to pixel art, animations, sound effects, music, and visual designs, is the intellectual property of Digital Bonfire and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content in the App without our prior written consent.",
+        },
+        {
+          title: "Acceptable Use",
+          content:
+            "You agree to use the App only for its intended purpose as a personal relaxation and entertainment tool. You may not:\n\n• Attempt to reverse engineer, decompile, or disassemble the App\n• Use the App for any unlawful purpose\n• Redistribute or resell the App or its content\n• Interfere with or disrupt the App's functionality",
+        },
+        {
+          title: "Disclaimer of Warranties",
+          content:
+            'The App is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the App will be uninterrupted, error-free, or free of harmful components.',
+        },
+        {
+          title: "Limitation of Liability",
+          content:
+            "To the maximum extent permitted by applicable law, Digital Bonfire shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the App.",
+        },
+        {
+          title: "Changes to Terms",
+          content:
+            "We reserve the right to modify these Terms at any time. Changes will be effective when posted on this page. Your continued use of the App after any changes constitutes acceptance of the new Terms.",
+        },
+        {
+          title: "Governing Law",
+          content:
+            "These Terms shall be governed by and construed in accordance with the laws of Japan, without regard to its conflict of law provisions.",
+        },
+        {
+          title: "Contact Us",
+          content:
+            "If you have any questions about these Terms, please contact us at:\n\nEmail: support@digital-bonfire.app",
+        },
+      ],
+    },
   },
 };
 
@@ -213,6 +322,115 @@ const ja: typeof en = {
   },
   footer: {
     copyright: "Takibi. All rights reserved.",
+    privacy: "プライバシーポリシー",
+    terms: "利用規約",
+  },
+  legal: {
+    backToHome: "ホームに戻る",
+    privacy: {
+      title: "プライバシーポリシー",
+      description: "Takibiのプライバシーポリシー",
+      lastUpdated: "最終更新日：2026年2月17日",
+      sections: [
+        {
+          title: "はじめに",
+          content:
+            "Takibi（以下「当社」）は、お客様のプライバシーの保護に努めています。本プライバシーポリシーは、Takibiモバイルアプリケーション（以下「本アプリ」）をご利用いただく際の情報の取り扱いについて説明するものです。",
+        },
+        {
+          title: "収集する情報",
+          content:
+            "Takibiはお客様のプライバシーを最優先に設計されています。サービスの提供と改善に必要な最小限のデータのみを収集します。\n\n・購入情報：サブスクリプションおよび購入データは、App Storeを通じてAppleが完全に処理します。当社がお支払い情報を直接収集・保存することはありません。\n・利用分析：アプリの改善のため、匿名かつ集計された利用データ（機能の使用頻度など）を収集する場合があります。このデータから個人を特定することはできません。\n・デバイス情報：クラッシュレポートおよびパフォーマンス最適化のため、基本的なデバイス情報を収集する場合があります。",
+        },
+        {
+          title: "収集しない情報",
+          content:
+            "当社は以下の情報を収集しません。\n\n・個人識別情報（氏名、メールアドレス、電話番号）\n・位置情報\n・連絡先またはアドレス帳データ\n・写真、カメラ、マイクのデータ\n・健康またはフィットネスデータ\n・閲覧履歴またはトラッキングデータ",
+        },
+        {
+          title: "第三者サービス",
+          content:
+            "本アプリは以下の第三者サービスを使用する場合があります。\n\n・Apple App Store：サブスクリプションおよび購入の処理に使用します。決済処理にはAppleのプライバシーポリシーが適用されます。\n・分析サービス：アプリの利用状況を集計的に把握するため、プライバシーに配慮した分析サービスを使用する場合があります。",
+        },
+        {
+          title: "データセキュリティ",
+          content:
+            "当社は、本アプリを通じて処理される情報を保護するために適切な措置を講じています。収集するデータが最小限であるため、お客様のプライバシーリスクは本質的に低くなっています。",
+        },
+        {
+          title: "お子様のプライバシー",
+          content:
+            "Takibiは13歳未満のお子様から意図的に個人情報を収集することはありません。本アプリは個人情報を必要としないため、すべての年齢のユーザーが安全にご利用いただけるよう設計されています。",
+        },
+        {
+          title: "ポリシーの変更",
+          content:
+            "当社は本プライバシーポリシーを随時更新する場合があります。変更がある場合は、改訂日を更新した上で本ページに掲載します。定期的にご確認いただくことをお勧めします。",
+        },
+        {
+          title: "お問い合わせ",
+          content:
+            "本プライバシーポリシーに関するご質問がございましたら、以下までご連絡ください。\n\nメール：support@digital-bonfire.app",
+        },
+      ],
+    },
+    terms: {
+      title: "利用規約",
+      description: "Takibiの利用規約",
+      lastUpdated: "最終更新日：2026年2月17日",
+      sections: [
+        {
+          title: "規約への同意",
+          content:
+            "Takibi（以下「本アプリ」）をダウンロード、インストール、または使用することにより、お客様は本利用規約（以下「本規約」）に拘束されることに同意したものとみなされます。本規約に同意いただけない場合は、本アプリをご利用にならないでください。",
+        },
+        {
+          title: "サービスの説明",
+          content:
+            "Takibiは、ピクセルアートの焚き火体験を提供するリラクゼーション・エンターテインメントアプリケーションです。ユーザーは薪の種類、コンパニオン、天候効果をカスタマイズし、心安らぐ映像と音声の体験をお楽しみいただけます。",
+        },
+        {
+          title: "サブスクリプションと購入",
+          content:
+            "本アプリは無料機能とプレミアム機能の両方を提供します。\n\n・無料機能：基本的な薪タイプとコンパニオンを無料でご利用いただけます。\n・プレミアムサブスクリプション：追加の薪タイプ、コンパニオン、天候効果は、月額、年額、または買い切りのサブスクリプションプランでご利用いただけます。\n・すべての購入およびサブスクリプションはApple App Storeを通じて処理され、Appleの利用規約が適用されます。\n・サブスクリプションの管理（解約・更新を含む）は、Apple IDのアカウント設定で行ってください。\n・返金のご依頼は、Appleの返金ポリシーに従い、Appleにお問い合わせください。",
+        },
+        {
+          title: "知的財産権",
+          content:
+            "本アプリ内のすべてのコンテンツ（ピクセルアート、アニメーション、効果音、音楽、ビジュアルデザインを含むがこれらに限定されない）は、Takibiの知的財産であり、著作権およびその他の知的財産権法によって保護されています。当社の事前の書面による同意なく、本アプリのコンテンツを複製、配布、変更、または二次的著作物の作成に使用することはできません。",
+        },
+        {
+          title: "利用上の遵守事項",
+          content:
+            "お客様は、本アプリを個人のリラクゼーションおよびエンターテインメントという本来の目的にのみ使用することに同意するものとします。以下の行為は禁止されています。\n\n・本アプリのリバースエンジニアリング、逆コンパイル、または逆アセンブルを試みること\n・本アプリを違法な目的に使用すること\n・本アプリまたはそのコンテンツを再配布または転売すること\n・本アプリの機能を妨害または破壊すること",
+        },
+        {
+          title: "保証の免責",
+          content:
+            "本アプリは「現状のまま」かつ「利用可能な状態で」提供され、明示的または黙示的を問わず、いかなる種類の保証も行いません。当社は、本アプリが中断なく、エラーなく、または有害な要素を含まないことを保証するものではありません。",
+        },
+        {
+          title: "責任の制限",
+          content:
+            "適用法令で許容される最大限の範囲において、Takibiは、お客様の本アプリの使用または使用不能に起因する間接的、偶発的、特別、結果的、または懲罰的損害について一切の責任を負わないものとします。",
+        },
+        {
+          title: "規約の変更",
+          content:
+            "当社は、本規約をいつでも変更する権利を有します。変更は本ページに掲載された時点で効力を生じます。変更後も本アプリを継続してご利用いただくことにより、新しい規約に同意したものとみなされます。",
+        },
+        {
+          title: "準拠法",
+          content:
+            "本規約は、法の抵触に関する規定にかかわらず、日本法に準拠し、日本法に従って解釈されるものとします。",
+        },
+        {
+          title: "お問い合わせ",
+          content:
+            "本規約に関するご質問がございましたら、以下までご連絡ください。\n\nメール：support@digital-bonfire.app",
+        },
+      ],
+    },
   },
 };
 

@@ -1,0 +1,11 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import LegalPage from "~/components/legal-page.astro";
+import { translations } from "~/i18n/translations";
+
+const t = translations.en;
+---
+
+<Layout lang="en" title={t.legal.terms.title} description={t.legal.terms.description}>
+  <LegalPage lang="en" page="terms" />
+</Layout>

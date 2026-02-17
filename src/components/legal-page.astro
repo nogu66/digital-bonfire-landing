@@ -1,0 +1,71 @@
+---
+import PixelIcon from "~/components/pixel-icon.astro";
+import ThemeSwitcher from "~/components/theme-switcher.astro";
+import type { Lang } from "~/i18n/translations";
+import { translations } from "~/i18n/translations";
+
+interface Props {
+  lang: Lang;
+  page: "privacy" | "terms";
+}
+
+const { lang, page } = Astro.props;
+const t = translations[lang];
+const legal = t.legal[page];
+const homeHref = lang === "en" ? "/" : "/ja/";
+---
+
+<div class="min-h-screen">
+  <header class="sticky top-0 z-20 border-b border-default bg-default px-8 py-4">
+    <div class="mx-auto flex max-w-3xl items-center justify-between">
+      <a class="flex items-center gap-3 hover:text-primary" href={homeHref}>
+        <PixelIcon name="flame-small" size={24} />
+        <span class="font-extrabold tracking-tight text-lg">{t.splash.title}</span>
+      </a>
+      <ThemeSwitcher />
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-8 py-16">
+    <a
+      href={homeHref}
+      class="mb-8 inline-flex items-center gap-1 text-sm text-offset hover:text-primary"
+    >
+      &larr; {t.legal.backToHome}
+    </a>
+
+    <h1 class="gradient-text mb-2 font-extrabold text-4xl">{legal.title}</h1>
+    <p class="mb-12 text-sm text-offset">{legal.lastUpdated}</p>
+
+    <div class="space-y-10">
+      {
+        legal.sections.map((section) => (
+          <section>
+            <h2 class="mb-3 font-bold text-xl">{section.title}</h2>
+            <div class="space-y-4 text-offset leading-relaxed">
+              {section.content.split("\n\n").map((paragraph) => (
+                <p class="whitespace-pre-line">{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+
+  <footer class="border-t border-default px-8 py-8">
+    <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 sm:flex-row sm:justify-between">
+      <p class="text-sm text-offset">
+        &copy; {new Date().getFullYear()} {t.footer.copyright}
+      </p>
+      <div class="flex gap-6 text-sm text-offset">
+        <a href={lang === "en" ? "/privacy/" : "/ja/privacy/"} class="hover:text-primary">
+          {t.footer.privacy}
+        </a>
+        <a href={lang === "en" ? "/terms/" : "/ja/terms/"} class="hover:text-primary">
+          {t.footer.terms}
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
