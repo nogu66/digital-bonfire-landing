@@ -2,9 +2,9 @@ export type Lang = "en" | "ja";
 
 const en = {
   meta: {
-    title: "Digital Bonfire - Pixel Art Campfire Experience",
+    title: "Bonfire: Relax & Focus - Pixel Art Campfire Experience",
     description:
-      "Digital Bonfire - A cozy pixel art campfire experience. Customize your fire, choose a companion, and relax under the starry night sky. Available on iOS.",
+      "Bonfire: Relax & Focus - A cozy pixel art campfire experience. Customize your fire, choose a companion, and relax under the starry night sky. Available on iOS.",
   },
   nav: {
     features: "Features",
@@ -13,7 +13,7 @@ const en = {
     download: "Download",
   },
   splash: {
-    title: "Digital Bonfire",
+    title: "Bonfire: Relax & Focus",
     subtitle: "Pixel art campfire experience.",
     tagline: "Light your fire, find your calm.",
     downloadBtn: "Download Now",
@@ -28,7 +28,7 @@ const en = {
   },
   features: {
     title: "Features",
-    lead: 'Digital Bonfire brings <span class="text-primary">warmth</span> to your device. A <span class="text-primary">cozy</span> escape with <span class="text-primary">endless</span> combinations.',
+    lead: 'Bonfire: Relax & Focus brings <span class="text-primary">warmth</span> to your device. A <span class="text-primary">cozy</span> escape with <span class="text-primary">endless</span> combinations.',
     items: [
       {
         title: "Pixel Art Aesthetics",
@@ -94,7 +94,7 @@ const en = {
   },
   download: {
     title: "Download",
-    lead: 'Ready to <span class="text-primary">light your fire</span>? Download Digital Bonfire and start your <span class="text-primary">cozy journey</span> today.',
+    lead: 'Ready to <span class="text-primary">light your fire</span>? Download Bonfire: Relax & Focus and start your <span class="text-primary">cozy journey</span> today.',
     downloadOn: "Download on the",
     appStore: "App Store",
     freeText:
@@ -104,7 +104,7 @@ const en = {
     lifetime: "Lifetime",
   },
   footer: {
-    copyright: "Digital Bonfire. All rights reserved.",
+    copyright: "Bonfire: Relax & Focus. All rights reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
   },
@@ -112,18 +112,18 @@ const en = {
     backToHome: "Back to Home",
     privacy: {
       title: "Privacy Policy",
-      description: "Privacy Policy for Digital Bonfire",
+      description: "Privacy Policy for Bonfire: Relax & Focus",
       lastUpdated: "Last updated: February 17, 2026",
       sections: [
         {
           title: "Introduction",
           content:
-            'Digital Bonfire ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use the Digital Bonfire mobile application (the "App").',
+            'Bonfire: Relax & Focus ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use the Bonfire: Relax & Focus mobile application (the "App").',
         },
         {
           title: "Information We Collect",
           content:
-            "Digital Bonfire is designed with your privacy in mind. We collect minimal data necessary to provide and improve our service:\n\n• Purchase Information: Subscription and purchase data is handled entirely by Apple through the App Store. We do not directly collect or store your payment information.\n• Usage Analytics: We may collect anonymous, aggregated usage data (such as feature usage frequency) to improve the App. This data cannot be used to identify you personally.\n• Device Information: Basic device information may be collected for crash reporting and performance optimization.",
+            "Bonfire: Relax & Focus is designed with your privacy in mind. We collect minimal data necessary to provide and improve our service:\n\n• Purchase Information: Subscription and purchase data is handled entirely by Apple through the App Store. We do not directly collect or store your payment information.\n• Usage Analytics: We may collect anonymous, aggregated usage data (such as feature usage frequency) to improve the App. This data cannot be used to identify you personally.\n• Device Information: Basic device information may be collected for crash reporting and performance optimization.",
         },
         {
           title: "Information We Do Not Collect",
@@ -143,7 +143,7 @@ const en = {
         {
           title: "Children's Privacy",
           content:
-            "Digital Bonfire does not knowingly collect personal information from children under 13. The App is designed to be safe for users of all ages as it does not require any personal information to function.",
+            "Bonfire: Relax & Focus does not knowingly collect personal information from children under 13. The App is designed to be safe for users of all ages as it does not require any personal information to function.",
         },
         {
           title: "Changes to This Policy",
@@ -153,24 +153,24 @@ const en = {
         {
           title: "Contact Us",
           content:
-            "If you have any questions about this Privacy Policy, please contact us at:\n\nEmail: support@digital-bonfire.app",
+            "If you have any questions about this Privacy Policy, please contact us at:\n\nEmail: shuhary.info@gmail.com",
         },
       ],
     },
     terms: {
       title: "Terms of Service",
-      description: "Terms of Service for Digital Bonfire",
+      description: "Terms of Service for Bonfire: Relax & Focus",
       lastUpdated: "Last updated: February 17, 2026",
       sections: [
         {
           title: "Agreement to Terms",
           content:
-            'By downloading, installing, or using Digital Bonfire (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.',
+            'By downloading, installing, or using Bonfire: Relax & Focus (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.',
         },
         {
           title: "Description of Service",
           content:
-            "Digital Bonfire is a relaxation and entertainment application that provides a pixel art campfire experience. The App allows users to customize fire types, companions, and weather effects for a calming visual and audio experience.",
+            "Bonfire: Relax & Focus is a relaxation and entertainment application that provides a pixel art campfire experience. The App allows users to customize fire types, companions, and weather effects for a calming visual and audio experience.",
         },
         {
           title: "Subscriptions and Purchases",
@@ -180,7 +180,7 @@ const en = {
         {
           title: "Intellectual Property",
           content:
-            "All content within the App, including but not limited to pixel art, animations, sound effects, music, and visual designs, is the intellectual property of Digital Bonfire and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content in the App without our prior written consent.",
+            "All content within the App, including but not limited to pixel art, animations, sound effects, music, and visual designs, is the intellectual property of Bonfire: Relax & Focus and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content in the App without our prior written consent.",
         },
         {
           title: "Acceptable Use",
@@ -195,7 +195,7 @@ const en = {
         {
           title: "Limitation of Liability",
           content:
-            "To the maximum extent permitted by applicable law, Digital Bonfire shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the App.",
+            "To the maximum extent permitted by applicable law, Bonfire: Relax & Focus shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the App.",
         },
         {
           title: "Changes to Terms",
@@ -210,7 +210,7 @@ const en = {
         {
           title: "Contact Us",
           content:
-            "If you have any questions about these Terms, please contact us at:\n\nEmail: support@digital-bonfire.app",
+            "If you have any questions about these Terms, please contact us at:\n\nEmail: shuhary.info@gmail.com",
         },
       ],
     },
@@ -370,7 +370,7 @@ const ja: typeof en = {
         {
           title: "お問い合わせ",
           content:
-            "本プライバシーポリシーに関するご質問がございましたら、以下までご連絡ください。\n\nメール：support@digital-bonfire.app",
+            "本プライバシーポリシーに関するご質問がございましたら、以下までご連絡ください。\n\nメール：shuhary.info@gmail.com",
         },
       ],
     },
@@ -427,7 +427,7 @@ const ja: typeof en = {
         {
           title: "お問い合わせ",
           content:
-            "本規約に関するご質問がございましたら、以下までご連絡ください。\n\nメール：support@digital-bonfire.app",
+            "本規約に関するご質問がございましたら、以下までご連絡ください。\n\nメール：shuhary.info@gmail.com",
         },
       ],
     },
