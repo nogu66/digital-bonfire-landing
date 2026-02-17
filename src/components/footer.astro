@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+import PixelIcon from "~/components/pixel-icon.astro";
+import type { Lang } from "~/i18n/translations";
+import { translations } from "~/i18n/translations";
+import type { FooterLink } from "~/types";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang];
+
+const links: Array<FooterLink> = [
+  {
+    url: "#",
+    description: "App Store",
+    icon: "mdi:apple",
+  },
+  {
+    url: "#",
+    description: "GitHub",
+    icon: "fa-brands:github-alt",
+  },
+  {
+    url: "#",
+    description: "Twitter / X",
+    icon: "fa-brands:twitter",
+  },
+];
+---
+
+<footer class="relative flex flex-col items-center justify-center gap-6 bg-gray-950 px-8 py-12">
+  <div class="absolute inset-0 bg-gradient-to-t from-orange-950/20 to-transparent"></div>
+  <div class="relative flex flex-col items-center gap-4">
+    <PixelIcon name="flame-small" size={20} />
+    <ul class="flex gap-4">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              class="flex size-12 items-center justify-center rounded-full border-2 border-current p-3 text-gray-400 hover:text-orange-400"
+              href={link.url}
+            >
+              <span class="sr-only">{link.description}</span>
+              <Icon class="size-full" name={link.icon} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="text-gray-500 text-sm">
+      &copy; {new Date().getFullYear()} {t.footer.copyright}
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,106 @@
+<div id="ember-field" class="absolute inset-0 overflow-hidden">
+  <canvas id="ember-canvas" class="block h-full w-full"></canvas>
+</div>
+
+<script>
+  import invariant from "tiny-invariant";
+
+  const COUNT = 120;
+  const SPEED = 0.5;
+
+  class Ember {
+    x: number;
+    y: number;
+    size: number;
+    speedX: number;
+    speedY: number;
+    opacity: number;
+    hue: number;
+    life: number;
+    maxLife: number;
+
+    constructor(width: number, height: number) {
+      this.x = Math.random() * width;
+      this.y = height + Math.random() * 50;
+      this.size = Math.random() * 3 + 1;
+      this.speedX = (Math.random() - 0.5) * 0.8;
+      this.speedY = -(Math.random() * 1.5 + 0.5);
+      this.opacity = Math.random() * 0.8 + 0.2;
+      this.hue = Math.random() * 40 + 10; // 10-50 (red to orange-yellow)
+      this.life = 0;
+      this.maxLife = Math.random() * 200 + 100;
+    }
+
+    update(width: number, height: number) {
+      this.x += this.speedX + Math.sin(this.life * 0.02) * 0.3;
+      this.y += this.speedY * SPEED;
+      this.life++;
+      this.opacity = Math.max(0, this.opacity - 0.002);
+
+      if (this.life > this.maxLife || this.y < -10 || this.opacity <= 0) {
+        this.x = Math.random() * width;
+        this.y = height + Math.random() * 50;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.speedY = -(Math.random() * 1.5 + 0.5);
+        this.opacity = Math.random() * 0.8 + 0.2;
+        this.hue = Math.random() * 40 + 10;
+        this.life = 0;
+        this.maxLife = Math.random() * 200 + 100;
+      }
+    }
+
+    draw(ctx: CanvasRenderingContext2D) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${this.hue}, 100%, 60%, ${this.opacity})`;
+      ctx.shadowBlur = this.size * 4;
+      ctx.shadowColor = `hsla(${this.hue}, 100%, 50%, ${this.opacity * 0.5})`;
+      ctx.fill();
+    }
+  }
+
+  const canvas = document.querySelector("#ember-canvas") as HTMLCanvasElement;
+  invariant(canvas, "canvas should not be null");
+  const ctx = canvas.getContext("2d");
+
+  const container = document.querySelector("#ember-field") as HTMLElement;
+  invariant(container, "container should not be null");
+
+  let embers: Ember[] = [];
+  let rafId = 0;
+
+  const resizeObserver = new ResizeObserver(setup);
+  resizeObserver.observe(container);
+
+  function setup() {
+    invariant(ctx, "canvas context should not be null");
+    rafId > 0 && cancelAnimationFrame(rafId);
+
+    const { clientWidth: width, clientHeight: height } = container;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.scale(dpr, dpr);
+
+    embers = Array.from({ length: COUNT }, () => new Ember(width, height));
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function frame() {
+    invariant(ctx, "canvas context should not be null");
+    const { clientWidth: width, clientHeight: height } = container;
+
+    ctx.clearRect(0, 0, width, height);
+
+    for (const ember of embers) {
+      ember.update(width, height);
+      ember.draw(ctx);
+    }
+
+    ctx.shadowBlur = 0;
+    rafId = requestAnimationFrame(frame);
+  }
+</script>

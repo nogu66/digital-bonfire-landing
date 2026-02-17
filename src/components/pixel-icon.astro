@@ -1,0 +1,53 @@
+---
+import { pixelArt } from "~/data/pixel-art";
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 64, class: className } = Astro.props;
+const art = pixelArt[name];
+
+if (!art) {
+  throw new Error(`Pixel art "${name}" not found`);
+}
+
+const pixelSize = 1;
+const viewWidth = art.width * pixelSize;
+const viewHeight = art.height * pixelSize;
+
+// Build rect elements from grid
+const rects: Array<{ x: number; y: number; fill: string }> = [];
+for (let row = 0; row < art.grid.length; row++) {
+  for (let col = 0; col < art.grid[row].length; col++) {
+    const char = art.grid[row][col];
+    if (char !== "." && art.palette[char]) {
+      rects.push({
+        x: col * pixelSize,
+        y: row * pixelSize,
+        fill: art.palette[char],
+      });
+    }
+  }
+}
+
+const aspectRatio = viewHeight / viewWidth;
+const displayWidth = size;
+const displayHeight = size * aspectRatio;
+---
+
+<svg
+  viewBox={`0 0 ${viewWidth} ${viewHeight}`}
+  width={displayWidth}
+  height={displayHeight}
+  class={className}
+  style="image-rendering: pixelated;"
+  role="img"
+  aria-hidden="true"
+>
+  {rects.map((r) => (
+    <rect x={r.x} y={r.y} width={pixelSize} height={pixelSize} fill={r.fill} />
+  ))}
+</svg>

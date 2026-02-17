@@ -1,0 +1,11 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import PageContent from "~/components/page-content.astro";
+import { translations } from "~/i18n/translations";
+
+const t = translations.ja;
+---
+
+<Layout lang="ja" title={t.meta.title} description={t.meta.description}>
+  <PageContent lang="ja" />
+</Layout>

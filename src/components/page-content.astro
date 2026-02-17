@@ -1,0 +1,28 @@
+---
+import type { Lang } from "~/i18n/translations";
+import Header from "./header.astro";
+import Splash from "./splash.astro";
+import Intro from "./intro.astro";
+import Features from "./features.astro";
+import WoodTypes from "./wood-types.astro";
+import Companions from "./companions.astro";
+import Download from "./download.astro";
+import Footer from "./footer.astro";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Header lang={lang} />
+<Splash lang={lang} />
+<div class="space-y-24 px-8 py-32">
+  <Intro lang={lang} />
+  <Features lang={lang} />
+  <WoodTypes lang={lang} />
+  <Companions lang={lang} />
+  <Download lang={lang} />
+</div>
+<Footer lang={lang} />
