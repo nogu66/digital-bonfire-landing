@@ -5,17 +5,21 @@ export interface PixelArtDef {
   grid: string[];
 }
 
+// App RGB → Hex conversions from BonfireModels.swift flameColors
+// 1 = brightest (center/peak), 2 = mid-bright, 3 = mid, 4 = dark outer
+// 5 = dark log, 6 = light log
+
 // Main bonfire - hero section (12x16)
 const bonfire: PixelArtDef = {
   width: 12,
   height: 16,
   palette: {
-    "1": "#FFF8E1",
-    "2": "#FFD54F",
-    "3": "#FF9800",
-    "4": "#E65100",
-    "5": "#6D4C41",
-    "6": "#3E2723",
+    "1": "#FFF299", // (1.0, 0.95, 0.6)
+    "2": "#FFBF1A", // (1.0, 0.75, 0.1)
+    "3": "#FF8000", // (1.0, 0.5, 0.0)
+    "4": "#D93300", // (0.85, 0.2, 0.0)
+    "5": "#804D26", // light log (0.5, 0.3, 0.15)
+    "6": "#59331A", // dark log (0.35, 0.2, 0.1)
   },
   grid: [
     "............",
@@ -51,25 +55,25 @@ const fireBaseGrid = [
   "........",
 ];
 
-// Wood type fire palettes
+// Wood type fire palettes - converted from BonfireModels.swift flameColors
 const firePalettes: Record<string, Record<string, string>> = {
   oak: {
-    "1": "#FFF8E1", "2": "#FFD54F", "3": "#FF9800", "4": "#E65100", "5": "#6D4C41",
+    "1": "#FFF299", "2": "#FFBF1A", "3": "#FF8000", "4": "#D93300", "5": "#804D26",
   },
   magic: {
-    "1": "#E1BEE7", "2": "#CE93D8", "3": "#7B1FA2", "4": "#4A148C", "5": "#6D4C41",
+    "1": "#FF4DB3", "2": "#00E680", "3": "#0066FF", "4": "#8000CC", "5": "#804D26",
   },
   wet: {
-    "1": "#CFD8DC", "2": "#90A4AE", "3": "#607D8B", "4": "#455A64", "5": "#6D4C41",
+    "1": "#B3B3A6", "2": "#998C73", "3": "#805926", "4": "#66330D", "5": "#804D26",
   },
   skull: {
-    "1": "#C8E6C9", "2": "#81C784", "3": "#4CAF50", "4": "#1B5E20", "5": "#6D4C41",
+    "1": "#CCFF80", "2": "#80E633", "3": "#33B31A", "4": "#00801A", "5": "#804D26",
   },
   cherry: {
-    "1": "#FCE4EC", "2": "#F48FB1", "3": "#E91E63", "4": "#880E4F", "5": "#6D4C41",
+    "1": "#FFE6EB", "2": "#FFB3BF", "3": "#E66680", "4": "#B3264D", "5": "#804D26",
   },
   frost: {
-    "1": "#E1F5FE", "2": "#81D4FA", "3": "#0288D1", "4": "#01579B", "5": "#6D4C41",
+    "1": "#D9F2FF", "2": "#80CCFF", "3": "#3380E6", "4": "#004DB3", "5": "#804D26",
   },
 };
 
@@ -82,89 +86,107 @@ function makeFireVariant(variant: string): PixelArtDef {
   };
 }
 
-// Black cat (8x10)
+// Black cat - from CompanionImageCache.swift drawCat()
+// fur: (0.15, 0.12, 0.12), eyes: (0.4, 0.9, 0.3)
 const cat: PixelArtDef = {
-  width: 8,
-  height: 10,
-  palette: { a: "#263238", b: "#FFC107" },
+  width: 9,
+  height: 7,
+  palette: { a: "#261F1F", e: "#66E64D" },
   grid: [
-    "........",
-    ".a....a.",
-    ".aaaaaa.",
-    ".abaaab.",
-    ".aaaaaa.",
-    "..aaaa..",
-    "..aaaa..",
-    ".aaaaaa.",
-    "..a..a..",
-    "........",
+    "a...a....",
+    "aa.aa....",
+    "aaaaa....",
+    "aeaea..aa",
+    ".aaa.a...",
+    ".aaa.....",
+    "aa.aa....",
   ],
 };
 
-// Wizard (8x12)
+// Wizard - from CompanionImageCache.swift drawWizard()
+// hat: (0.3, 0.2, 0.6), brim: (0.25, 0.15, 0.5), skin: (0.9, 0.75, 0.6)
+// robe: (0.4, 0.3, 0.7), star: (1.0, 0.9, 0.3)
 const wizard: PixelArtDef = {
   width: 8,
   height: 12,
-  palette: { p: "#7B1FA2", f: "#FFCC80", c: "#4A148C" },
+  palette: {
+    h: "#4D3399", // hat
+    b: "#402680", // hat brim
+    f: "#E6BF99", // skin
+    r: "#664DB3", // robe
+    s: "#FFE64D", // star
+    w: "#663319", // wand
+  },
   grid: [
-    "........",
-    "...p....",
-    "..ppp...",
-    ".ppppp..",
-    ".ppppp..",
+    "...h....",
+    "..hhh...",
+    "..hsh...",
+    ".hhhhh..",
+    "bbbbbbb.",
     "..fff...",
-    ".fffff..",
-    "..ccc...",
-    ".ccccc..",
-    ".ccccc..",
-    "..c.c...",
+    "..fff.w.",
+    ".rrrrr.w",
+    ".rrrrr..",
+    ".rrrrr..",
+    "rrrrrrr.",
     "........",
   ],
 };
 
-// Owl (8x10)
+// Owl - from CompanionImageCache.swift drawOwl()
+// brown: (0.45, 0.3, 0.15), light: (0.6, 0.45, 0.25)
+// eyes: (1.0, 0.8, 0.1), beak: (0.8, 0.5, 0.1)
 const owl: PixelArtDef = {
-  width: 8,
-  height: 10,
-  palette: { b: "#795548", w: "#FFFFFF", p: "#212121" },
+  width: 6,
+  height: 8,
+  palette: {
+    b: "#734D26", // brown
+    l: "#997340", // light chest
+    e: "#FFCC1A", // eyes
+    k: "#CC801A", // beak
+  },
   grid: [
-    "........",
-    "..bbbb..",
-    ".bwwwwb.",
-    ".bwpwpb.",
-    "..bbbb..",
-    ".bbbbbb.",
-    ".bbbbbb.",
-    "..b..b..",
-    "..b..b..",
-    "........",
+    "b...b.",
+    "bbbbb.",
+    "bekeb.",
+    "bblbb.",
+    ".blb..",
+    ".bbb..",
+    ".k.k..",
+    "......",
   ],
 };
 
-// Hooded figure (8x10)
+// Hooded figure - from CompanionImageCache.swift drawHooded()
+// hood: (0.2, 0.15, 0.15), dark: (0.1, 0.08, 0.08), eyes: (0.9, 0.3, 0.2)
 const hooded: PixelArtDef = {
   width: 8,
   height: 10,
-  palette: { d: "#37474F", s: "#263238", c: "#546E7A" },
+  palette: { d: "#332626", s: "#1A1414", e: "#E64D33" },
   grid: [
-    "........",
-    "..dddd..",
-    ".dddddd.",
-    ".ddssdd.",
-    ".ddssdd.",
-    "..cccc..",
-    ".cccccc.",
-    ".cccccc.",
-    "..c..c..",
+    "..ddd...",
+    ".ddddd..",
+    ".ddssd..",
+    ".desed..",
+    ".ddddd..",
+    ".ddddd..",
+    "ddddddd.",
+    "ddddddd.",
+    ".dd.dd..",
     "........",
   ],
 };
 
-// Solo campfire (8x8)
+// Solo campfire (8x8) - oak colors
 const solo: PixelArtDef = {
   width: 8,
   height: 8,
-  palette: { "1": "#FFF8E1", "2": "#FFD54F", "3": "#FF9800", "5": "#6D4C41" },
+  palette: {
+    "1": "#FFF299",
+    "2": "#FFBF1A",
+    "3": "#FF8000",
+    "5": "#804D26",
+  },
   grid: [
     "........",
     "...2....",
@@ -177,11 +199,15 @@ const solo: PixelArtDef = {
   ],
 };
 
-// Small flame for header (6x8)
+// Small flame for header (6x8) - oak colors
 const flameSmall: PixelArtDef = {
   width: 6,
   height: 8,
-  palette: { "1": "#FFF8E1", "2": "#FFD54F", "3": "#FF9800" },
+  palette: {
+    "1": "#FFF299",
+    "2": "#FFBF1A",
+    "3": "#FF8000",
+  },
   grid: [
     "......",
     "..2...",
