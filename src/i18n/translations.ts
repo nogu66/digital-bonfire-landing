@@ -97,6 +97,7 @@ const en = {
     lead: 'Ready to <span class="text-primary">light your fire</span>? Download Bonfire: Relax & Focus and start your <span class="text-primary">cozy journey</span> today.',
     downloadOn: "Download on the",
     appStore: "App Store",
+    storeUrl: "https://apps.apple.com/us/app/bonfire-relax-focus/id6759250539",
     freeText:
       "Free to download with basic features. Unlock all wood types, companions, and weather effects with a premium subscription.",
     monthly: "Monthly",
@@ -314,6 +315,7 @@ const ja: typeof en = {
     lead: '<span class="text-primary">火を灯す</span>準備はできましたか？Takibiをダウンロードして、<span class="text-primary">心安らぐ旅</span>を始めましょう。',
     downloadOn: "からダウンロード",
     appStore: "App Store",
+    storeUrl: "https://apps.apple.com/jp/app/takibi-%E7%99%92%E3%81%97%E3%81%A8%E9%9B%86%E4%B8%AD/id6759250539",
     freeText:
       "基本機能は無料でお楽しみいただけます。プレミアムサブスクリプションで全ての薪タイプ、コンパニオン、天候効果をアンロック。",
     monthly: "月額",
