@@ -3,7 +3,7 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://digital-bonfire.app/",
+  site: "https://bonfire.shuhary.com/",
   integrations: [tailwind(), icon()],
   i18n: {
     defaultLocale: "en",
